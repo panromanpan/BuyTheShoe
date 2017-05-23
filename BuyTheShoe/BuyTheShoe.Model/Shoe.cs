@@ -1,6 +1,7 @@
-namespace BuyTheShoe.Model
-{
-    public partial class Shoe
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+public partial class Shoe
     {
         [Key]
         public int ShoeId { get; set; }
