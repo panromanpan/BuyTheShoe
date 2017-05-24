@@ -25,4 +25,4 @@ public partial class Shoe
         [StringLength(50)]
         public string Category { get; set; }
     }
-}
+
