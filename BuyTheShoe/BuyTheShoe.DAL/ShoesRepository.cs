@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,29 +10,49 @@ namespace BuyTheShoe.DAL
 {
     class ShoesRepository : IShoesRepository
     {
+
+        private readonly ShoesContext _context;
+
+        public ShoesRepository(ShoesContext context)
+        {
+            _context = context;
+        }
         public void DeleteShoe(Shoe shoe)
         {
-            throw new NotImplementedException();
+            if (_context.Entry(shoe).State == EntityState.Detached)
+            {
+                _context.Shoes.Attach(shoe);
+            }
+            _context.Shoes.Remove(shoe);
+            _context.SaveChanges();
         }
 
         public Shoe GetAShoe()
         {
-            throw new NotImplementedException();
+            return _context.Shoes.FirstOrDefault();
         }
 
         public Shoe GetShoeById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Shoes.FirstOrDefault(c => c.ShoeId == id);
         }
 
         public List<Shoe> GetShoes()
         {
-            throw new NotImplementedException();
+            List<Shoe> shoes = _context.Shoes.ToList();
+
+            return shoes;
         }
 
         public void UpdateShoe(Shoe shoe)
         {
-            throw new NotImplementedException();
+                if (shoe == null)
+                {
+                    throw new ArgumentException("Trying to update null ");
+                }
+
+            _context.Shoes.AddOrUpdate(shoe);
+            _context.SaveChanges();
         }
     }
 }
