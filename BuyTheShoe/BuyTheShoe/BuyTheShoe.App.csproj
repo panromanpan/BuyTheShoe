@@ -55,10 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Messeges\UpdateListMessage.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\IDialogService.cs" />
     <Compile Include="Services\IShoesDataService.cs" />
     <Compile Include="Services\ShoesDataService.cs" />
+    <Compile Include="Utility\CustomCommand.cs" />
+    <Compile Include="Utility\Messenger.cs" />
+    <Compile Include="ViewModel\IShoeDetailViewModel.cs" />
+    <Compile Include="ViewModel\IShoeOverviewViewModel.cs" />
+    <Compile Include="ViewModel\ShoeDetailViewModel.cs" />
+    <Compile Include="ViewModel\ShoeOverviewViewModel.cs" />
     <Compile Include="Views\ShoesDetailView.xaml.cs">
       <DependentUpon>ShoesDetailView.xaml</DependentUpon>
     </Compile>
