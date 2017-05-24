@@ -42,7 +42,7 @@ namespace BuyTheShoe.ViewModel
             set
             {
                 selectedShoe = value;
-                RaisePropertyChanged("SelectedCoffee");
+                RaisePropertyChanged("SelectedShoe");
             }
         }
         private void OnUpdateListMessageReceived(UpdateListMessage obj)
