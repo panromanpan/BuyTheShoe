@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BuyTheShoe.DAL
 {
-    class ShoesRepository : IShoesRepository
+    public class ShoesRepository : IShoesRepository
     {
 
         private readonly ShoesContext _context;

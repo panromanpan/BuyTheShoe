@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace BuyTheShoe.ViewModel
 {
-    public interface IShoeDetailViewModel
+    public interface IShoesDetailViewModel
     {
         ICommand DeleteCommand { get; set; }
         event PropertyChangedEventHandler PropertyChanged;

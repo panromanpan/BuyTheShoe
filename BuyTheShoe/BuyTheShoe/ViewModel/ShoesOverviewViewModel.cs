@@ -8,7 +8,7 @@ using BuyTheShoe.Utility;
 
 namespace BuyTheShoe.ViewModel
 {
-    public class ShoeOverviewViewModel : IShoeOverviewViewModel
+    public class ShoesOverviewViewModel : IShoesOverviewViewModel
     {
         private Shoe selectedShoe;
         private IDialogService dialogService;
@@ -56,7 +56,7 @@ namespace BuyTheShoe.ViewModel
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
-        public ShoeOverviewViewModel(IShoesDataService shoesDataService, IDialogService dialogService)
+        public ShoesOverviewViewModel(IShoesDataService shoesDataService, IDialogService dialogService)
         {
             this.shoesDataService = shoesDataService;
             this.dialogService = dialogService;

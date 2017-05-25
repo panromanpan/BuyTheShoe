@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace BuyTheShoe.ViewModel
 {
-    public interface IShoeOverviewViewModel
+    public interface IShoesOverviewViewModel
     {
         ObservableCollection<Shoe> Shoes { get; set; }
         ICommand EditCommand { get; set; }

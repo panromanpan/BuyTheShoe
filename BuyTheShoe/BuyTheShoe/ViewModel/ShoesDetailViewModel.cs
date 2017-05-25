@@ -6,7 +6,7 @@ using BuyTheShoe.Utility;
 
 namespace BuyTheShoe.ViewModel
 {
-    public class ShoeDetailViewModel : INotifyPropertyChanged, IShoesDetailViewModel
+    public class ShoesDetailViewModel : INotifyPropertyChanged, IShoesDetailViewModel
     {
         private IDialogService dialogService;
         private IShoesDataService shoesDataService;
@@ -31,7 +31,7 @@ namespace BuyTheShoe.ViewModel
         public ICommand SaveCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
 
-        public ShoeDetailViewModel(IShoesDataService shoesDataService, IDialogService dialogService)
+        public ShoesDetailViewModel(IShoesDataService shoesDataService, IDialogService dialogService)
         {
             this.shoesDataService = shoesDataService;
             this.dialogService = dialogService;
